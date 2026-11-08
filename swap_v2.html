@@ -60,8 +60,14 @@
 				
 			];
 			
-			let new_warriors = warriors.sort((a, b) => a.name.localeCompare(b.name));
-			console.log(warriors);		// The array has changed
+			// Version 1 - The Array Has Changed
+			// let new_warriors = warriors.sort((a, b) => a.name.localeCompare(b.name));
+			// console.log(warriors);
+			// console.log(new_warriors);
+			
+			// Version 2 - Original Array Keeps Unchanged
+			let new_warriors = warriors.toSorted((a, b) => a.name.localeCompare(b.name));
+			console.log(warriors);
 			console.log(new_warriors);
 		</script>
 	</body>
