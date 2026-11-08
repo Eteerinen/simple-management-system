@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<h1>Swap</h1>
+		<script>
+			let old_warriors = ["Linn", "Lumi", "Kivi", "Juan", "Atlanti", "Brian"];
+			let new_warriors = [];
+			let sorted_ascCode = [];
+			let first_letter = "";
+			let cur_ascCode = 0;
+			
+			for(let i = 0; i < old_warriors.length; i++){
+				let name = old_warriors[i];
+				first_letter = name.slice(0,1);
+				cur_ascCode = first_letter.charCodeAt();
+				sorted_ascCode.push(cur_ascCode);
+			}
+			console.log(old_warriors.sort());
+			console.log(sorted_ascCode);
+			console.log("-----");
+			console.log(sorted_ascCode.sort((a, b) => a -b));
+		</script>
+	</body>
+</html>
