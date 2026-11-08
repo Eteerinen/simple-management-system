@@ -57,7 +57,13 @@
 					occupation: "research assistant",
 					address: "Western Rostand"
 				},
-				
+				{
+					name: "Liekki",
+					age: 17,
+					gender: "male",
+					occupation: "unemployment",
+					address: "Western Rostand"
+				},
 			];
 			
 			// Version 1 - The Array Has Changed
@@ -66,9 +72,17 @@
 			// console.log(new_warriors);
 			
 			// Version 2 - Original Array Keeps Unchanged
-			let new_warriors = warriors.toSorted((a, b) => a.name.localeCompare(b.name));
+			// let new_warriors = warriors.toSorted((a, b) => a.name.localeCompare(b.name));
+			// console.log(warriors);
+			// console.log(new_warriors);
+			
+			// Version 3 - Order Only By Age (Original Array Remains The Same)
+			let new_warriors_1 = warriors.toSorted((a, b) => a.age - b.age);
+			// Improvement - Order By Age(Priority 1st) and Name(Priority 2nd)
+			let new_warriors_2 = warriors.toSorted((a, b) => a.age - b.age || a.name.localeCompare(b.name));
 			console.log(warriors);
-			console.log(new_warriors);
+			console.log(new_warriors_1);
+			console.log(new_warriors_2);
 		</script>
 	</body>
 </html>
